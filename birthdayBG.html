@@ -7,7 +7,6 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>flower</title>
     <style>
-    
         /* CSS untuk membuat video ditengah */
         .video-container {
             position: absolute;
@@ -33,8 +32,8 @@
         .nextButton {
             position: fixed;
             z-index: 1000;
-            bottom: 20px; /* Sesuaikan dengan jarak dari bawah halaman */
-            right: 20px;
+            top: 20px; /* Atur jarak dari atas halaman */
+            right: 20px; /* Atur jarak dari kanan halaman */
             padding: 10px 20px;
             background-color: #6bf0ff;
             color: black;
@@ -49,6 +48,11 @@
 <body>
     <div class="night"></div>
 
+    <!-- Tombol Next -->
+    <div>
+        <button class="nextButton"><a href="new bg.html">NEXT</a></button>
+    </div>
+
     <!-- Deskripsi -->
     <div class="description">
         <span>Udah lihat bunganya kan? Sekarang tonton videonya ya!</span>
@@ -58,11 +62,5 @@
     <div class="video-container">
         <iframe src="https://www.youtube.com/embed/WwvIVgWad20" frameborder="0" allowfullscreen></iframe>
     </div>
-     <!-- Tombol Next -->
-    <div>
-      <button class="nextButton"><a href="new bg.html">NEXT</a></button>
-    </div>
-    <!-- Tombol Next -->
-    
 </body>
 </html>
