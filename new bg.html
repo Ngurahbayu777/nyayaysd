@@ -7,29 +7,40 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>flower</title>
     <style>
+        body {
+            margin: 0; /* Menghilangkan margin bawaan dari browser */
+            padding: 0; /* Menghilangkan padding bawaan dari browser */
+        }
         .night {
-            /* Atur background night di sini */
             background-color: black;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Mengatur z-index agar berada di belakang */
+            z-index: -1;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
         }
         .image {
-            width: 300px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
-            height: auto; /* Biarkan tinggi gambar disesuaikan secara otomatis */
+            max-width: 80%; /* Lebar maksimal gambar */
+            height: auto; /* Tinggi gambar disesuaikan secara otomatis */
             display: block;
-            margin: 0 auto 20px; /* Membuat gambar berada di tengah-tengah */
-            z-index: 1; /* Mengatur z-index agar berada di depan */
+            margin: 0 auto 20px;
         }
     </style>
 </head>
 <body>
     <div class="night"></div>
 
-    <!-- Gambar dari GitHub -->
-    <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image">
+    <div class="container">
+        <!-- Gambar dari GitHub -->
+        <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image">
+    </div>
 </body>
 </html>
