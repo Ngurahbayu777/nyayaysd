@@ -6,8 +6,59 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>flower</title>
+    <style>
+        /* CSS untuk membuat video ditengah */
+        .video-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%; /* Lebar video */
+            max-width: 560px; /* Lebar maksimal video */
+        }
+        .video-container iframe {
+            width: 100%; /* Lebar video */
+            height: 100%; /* Tinggi video */
+        }
+        .description {
+            position: absolute;
+            top: calc(50% - 150px); /* Tengah vertikal - setengah tinggi deskripsi */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white; /* Warna teks putih */
+            z-index: 1; /* Memberikan z-index yang lebih tinggi */
+        }
+        .nextButton {
+            position: fixed;
+            z-index: 1000;
+            bottom: 20px; /* Sesuaikan dengan jarak dari bawah halaman */
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #6bf0ff;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <div class="night"></div>
+
+    <!-- Deskripsi -->
+    <div class="description">
+        <span>Udah lihat bunganya kan? Sekarang tonton videonya ya!</span>
+    </div>
+
+    <!-- Video -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/WwvIVgWad20" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Tombol Next -->
+    <a class="nextButton" href="page_selanjutnya.html">Next</a>
 </body>
 </html>
