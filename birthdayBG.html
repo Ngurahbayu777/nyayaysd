@@ -31,22 +31,17 @@
         }
         .nextButton {
             position: absolute;
-            z-index: 100;
-            top: 40px; /* Sesuaikan dengan jarak dari atas halaman */
-            right: 20px; /* Sesuaikan dengan jarak dari kanan halaman */
-            padding: 10px; /* Perbaiki padding agar menjadi kotak persegi */
+            z-index: 1000;
+            top: 20px; /* Atur jarak dari atas halaman */
+            right: 20px; /* Atur jarak dari kanan halaman */
+            padding: 10px 20px;
             background-color: #6bf0ff;
             color: black;
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 10px;
-        }
-        .nextButton a {
+            font-size: 16px;
             text-decoration: none;
-            font-weight: bold;
-            color: #000;
-            background-color: #6bf0ff;
         }
     </style>
 </head>
@@ -54,9 +49,7 @@
     <div class="night"></div>
 
     <!-- Tombol Next -->
-    <div>
-        <button class="nextButton"><a href="new bg.html">NEXT</a></button>
-    </div>
+    <a href="halaman_selanjutnya.html" class="nextButton">NEXT</a>
 
     <!-- Deskripsi -->
     <div class="description">
