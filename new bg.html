@@ -12,12 +12,6 @@
             padding: 0; /* Menghilangkan padding bawaan dari browser */
         }
         .night {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
             z-index: -1;
         }
         .container {
@@ -29,7 +23,7 @@
         }
         .description {
             position: absolute;
-            top: calc(50% + 100px); /* Tengah vertikal + setengah tinggi deskripsi */
+            top: calc(50% - 150px - 20px); /* Tengah vertikal - setengah tinggi deskripsi - jarak antara gambar dan deskripsi */
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -37,21 +31,22 @@
             z-index: 1; /* Memberikan z-index yang lebih tinggi */
         }
         .image {
+            top: calc(50% + 20px); /* Tengah vertikal + jarak antara gambar dan deskripsi */
             max-width: 50%; /* Lebar maksimal gambar */
             height: auto; /* Tinggi gambar disesuaikan secara otomatis */
-            margin-bottom: 20px; /* Jarak antara gambar dan deskripsi */
+            margin: 0 auto 20px;
         }
     </style>
 </head>
 <body>
     <div class="night"></div>
 
-    <!-- Deskripsi -->
-    <div class="description">
-        <span> SCAN! untuk kejutan selanjutnyaa!! !</span>
-    </div>
-
     <div class="container">
+        <!-- Deskripsi -->
+        <div class="description">
+            <span> SCAN! untuk kejutan selanjutnyaa!! !</span>
+        </div>
+
         <!-- Gambar dari GitHub -->
         <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image">
     </div>
