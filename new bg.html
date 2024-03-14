@@ -8,29 +8,28 @@
     <title>flower</title>
     <style>
         .night {
-            /* Definisi background malam di sini */
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Tinggi kontainer sesuai tinggi viewport */
+            /* Atur background night di sini */
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Mengatur z-index agar berada di belakang */
         }
         .image {
-            max-width: 100%; /* Lebar gambar tidak lebih besar dari lebar kontainer */
-            max-height: 100%; /* Tinggi gambar tidak lebih besar dari tinggi kontainer */
-            width: auto; /* Untuk mempertahankan proporsi asli */
-            height: auto; /* Untuk mempertahankan proporsi asli */
+            width: 300px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+            height: auto; /* Biarkan tinggi gambar disesuaikan secara otomatis */
+            display: block;
+            margin: 0 auto 20px; /* Membuat gambar berada di tengah-tengah */
+            z-index: 1; /* Mengatur z-index agar berada di depan */
         }
     </style>
 </head>
 <body>
     <div class="night"></div>
 
-    <div class="container">
-        <!-- Gambar dari GitHub -->
-        <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image">
-    </div>
-
+    <!-- Gambar dari GitHub -->
+    <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image">
 </body>
 </html>
