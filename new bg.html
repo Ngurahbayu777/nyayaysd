@@ -6,12 +6,31 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>flower</title>
+    <style>
+        .night {
+            /* Definisi background malam di sini */
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Tinggi kontainer sesuai tinggi viewport */
+        }
+        .image {
+            max-width: 100%; /* Lebar gambar tidak lebih besar dari lebar kontainer */
+            max-height: 100%; /* Tinggi gambar tidak lebih besar dari tinggi kontainer */
+            width: auto; /* Untuk mempertahankan proporsi asli */
+            height: auto; /* Untuk mempertahankan proporsi asli */
+        }
+    </style>
 </head>
 <body>
     <div class="night"></div>
 
-    <!-- Gambar dari GitHub -->
-    <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar">
+    <div class="container">
+        <!-- Gambar dari GitHub -->
+        <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image">
+    </div>
 
 </body>
 </html>
