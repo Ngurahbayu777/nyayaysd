@@ -28,6 +28,16 @@
             height: auto; /* Tinggi gambar disesuaikan secara otomatis */
             margin: 0 auto 20px;
         }
+        .description {
+            display: none; /* Awalnya disembunyikan */
+            position: absolute;
+            top: calc(50% + 100px); /* Tengah vertikal + jarak antara gambar dan deskripsi */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white; /* Warna teks putih */
+            z-index: 1; /* Memberikan z-index yang lebih tinggi */
+        }
     </style>
 </head>
 <body>
@@ -41,6 +51,9 @@
 
     <div class="container">
         <!-- Deskripsi -->
+        <div class="description" id="description">
+            <span>SCAN! untuk kejutan selanjutnyaa!!</span>
+        </div>
 
         <!-- Tombol play music -->
         <button class="playButton" id="playButton" onclick="playAudio()">Play Music</button>
