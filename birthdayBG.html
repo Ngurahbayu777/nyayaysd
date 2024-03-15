@@ -45,11 +45,18 @@
         }
     </style>
 </head>
-<body>
-    <div class="night"></div>
+<body class="container">
+    <div class="audio">
+        <audio id="flowerAudio" controls preload="auto" hidden loop playsinline>
+            <source src="https://h.top4top.io/m_2994jacmk1.mp3" type="audio/mpeg">
+        </audio>
+        <button class="playButton" id="playButton" onclick="playAudio()">Play Music</button>
+    </div>
 
     <!-- Tombol Next -->
     <a href="new bg.html" class="nextButton">NEXT</a>
+
+    <div class="night"></div>
 
     <!-- Deskripsi -->
     <div class="description">
@@ -57,6 +64,5 @@
     </div>
 
     <!-- Video -->
-    
 </body>
 </html>
