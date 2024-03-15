@@ -22,7 +22,7 @@
             text-align: center;
         }
         .description {
-            display: none; /* Deskripsi awalnya disembunyikan */
+            display: none; /* Awalnya disembunyikan */
             position: absolute;
             top: calc(50% - 150px - 20px); /* Tengah vertikal - setengah tinggi deskripsi - jarak antara gambar dan deskripsi */
             left: 50%;
@@ -32,6 +32,7 @@
             z-index: 1; /* Memberikan z-index yang lebih tinggi */
         }
         .image {
+            display: none; /* Awalnya disembunyikan */
             top: calc(50% + 20px); /* Tengah vertikal + jarak antara gambar dan deskripsi */
             max-width: 50%; /* Lebar maksimal gambar */
             height: auto; /* Tinggi gambar disesuaikan secara otomatis */
@@ -41,7 +42,7 @@
 </head>
 <body>
     <div class="audio">
-        <audio id="flowerAudio" controls preload="auto" hidden loop playsinline>
+        <audio id="flowerAudio" controls preload="auto" loop playsinline>
             <source src="https://c.top4top.io/m_299694ze41.mp3" type="audio/mpeg">
         </audio>
     </div>
@@ -49,19 +50,30 @@
 
     <div class="container">
         <!-- Deskripsi -->
-        <div id="description" class="description">
+        <div class="description" id="description">
             <span> SCAN! untuk kejutan selanjutnyaa!! !</span>
         </div>
 
+        <!-- Tombol play music -->
+        <button class="playButton" id="playButton" onclick="playAudio()">Play Music</button>
+
         <!-- Gambar dari GitHub -->
-        <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image">
+        <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image" id="flowerImage">
     </div>
 
     <script>
-        // Menunjukkan deskripsi setelah tombol play audio diklik
-        document.getElementById('flowerAudio').addEventListener('play', function() {
-            document.getElementById('description').style.display = 'block';
-        });
+        function playAudio() {
+            var audio = document.getElementById("flowerAudio");
+            var description = document.getElementById("description");
+            var image = document.getElementById("flowerImage");
+
+            // Munculkan deskripsi dan gambar setelah tombol play ditekan
+            description.style.display = "block";
+            image.style.display = "block";
+
+            // Mulai audio
+            audio.play();
+        }
     </script>
 </body>
 </html>
