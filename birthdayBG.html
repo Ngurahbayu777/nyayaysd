@@ -32,15 +32,23 @@
         .container {
             text-align: center; /* Pusatkan konten secara horizontal */
         }
+        .nextButton {
+            position: fixed;
+            z-index: 100;
+            top: 40px; /* Atur jarak dari atas halaman */
+            right: 20px; /* Atur jarak dari kanan halaman */
+            padding: 5px 20px;
+            background-color: #6bf0ff;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body class="container">
-        <button class="playButton" id="playButton" onclick="playAudio()">Play Music</button>
-    </div>
-
-    <div>
-        <button class="nextButton"><a href="new bg.html">NEXT</a></button>
-    </div>
     <div class="night"></div>
 
     <!-- Deskripsi -->
@@ -48,6 +56,14 @@
         <span>Udah lihat bunganya kan? Sekarang tonton videonya ya!</span>
     </div>
 
+    <!-- Tombol Next -->
+    <div>
+        <button class="nextButton"><a href="new bg.html">NEXT</a></button>
+    </div>
+
     <!-- Video -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/WwvIVgWad20" frameborder="0" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
