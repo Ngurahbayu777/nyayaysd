@@ -22,9 +22,8 @@
             text-align: center;
         }
         .description {
-            display: none; /* Awalnya disembunyikan */
             position: absolute;
-            top: 20%;
+            top: calc(50% - 150px - 20px); /* Tengah vertikal - setengah tinggi deskripsi - jarak antara gambar dan deskripsi */
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -32,11 +31,13 @@
             z-index: 1; /* Memberikan z-index yang lebih tinggi */
         }
         .image {
-            display: none; /* Awalnya disembunyikan */
-            top: calc(50% + 20px); /* Tengah vertikal + jarak antara gambar dan deskripsi */
-            max-width: 40%; /* Lebar maksimal gambar */
+            position: absolute;
+            top: calc(50% - 200px); /* Atur posisi gambar lebih tinggi dari tengah */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 30%; /* Perkecil ukuran gambar */
             height: auto; /* Tinggi gambar disesuaikan secara otomatis */
-            margin: 0 auto 20px;
+            margin: 0 auto; /* Tengah secara horizontal */
         }
     </style>
 </head>
@@ -50,6 +51,9 @@
     <div class="night"></div>
 
     <div class="container">
+        <!-- Gambar dari GitHub -->
+        <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image" id="flowerImage">
+
         <!-- Deskripsi -->
         <div class="description" id="description">
             <span> SCAN! untuk kejutan selanjutnyaa!! !</span>
@@ -57,9 +61,6 @@
 
         <!-- Tombol play music -->
         <button class="playButton" id="playButton" onclick="playAudio()">Play Music</button>
-
-        <!-- Gambar dari GitHub -->
-        <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image" id="flowerImage">
     </div>
 
     <script>
