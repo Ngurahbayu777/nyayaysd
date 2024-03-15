@@ -33,4 +33,55 @@
         }
         .image {
             position: absolute;
-            top: calc(50% - 200px); /* Atur posisi gambar lebih 
+            top: calc(50% - 200px); /* Atur posisi gambar lebih tinggi dari tengah */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 30%; /* Perkecil ukuran gambar */
+            height: auto; /* Tinggi gambar disesuaikan secara otomatis */
+            margin: 0 auto; /* Tengah secara horizontal */
+        }
+    </style>
+</head>
+<body>
+    <div class="audio">
+        <!-- Hapus keterangan audio -->
+        <!-- <audio id="flowerAudio" controls preload="auto" loop playsinline>
+            <source src="https://top4top.io/del599e67cc9225f304f6a570acae3b50eb.html" type="audio/mpeg">
+        </audio> -->
+    </div>
+    <div class="night"></div>
+
+    <div class="container">
+        <!-- Deskripsi -->
+        <div class="description" id="description">
+            <span> SCAN! untuk kejutan selanjutnyaa!! !</span>
+        </div>
+
+        <!-- Gambar dari GitHub -->
+        <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/frame(1).png?raw=true" alt="Deskripsi gambar" class="image" id="flowerImage">
+
+        <!-- Tombol play music -->
+        <button class="playButton" id="playButton" onclick="playAudio()">Play Music</button>
+    </div>
+
+    <script>
+        function playAudio() {
+            // Ambil elemen audio
+            var audio = new Audio("https://i.top4top.io/m_2996mvl6x1.mp3");
+            var description = document.getElementById("description");
+            var image = document.getElementById("flowerImage");
+            var playButton = document.getElementById("playButton");
+
+            // Munculkan deskripsi dan gambar setelah tombol play ditekan
+            description.style.display = "block";
+            image.style.display = "block";
+
+            // Sembunyikan tombol play
+            playButton.style.display = "none";
+
+            // Mulai audio
+            audio.play();
+        }
+    </script>
+</body>
+</html>
