@@ -20,6 +20,16 @@
           cursor: pointer;
           font-size: 10px;
         }
+
+        /* Tambahkan CSS untuk tautan a */
+        .nextButton a {
+            text-decoration: none; /* Hapus dekorasi tautan */
+            color: black; /* Atur warna teks tautan */
+            display: block; /* Jadikan tautan sebagai blok */
+            width: 100%; /* Lebar tautan menjadi 100% dari parentnya */
+            height: 100%; /* Tinggi tautan menjadi 100% dari parentnya */
+        }
+
         /* CSS untuk membuat video ditengah */
         .video-container {
             position: absolute;
@@ -42,7 +52,9 @@
             color: white; /* Warna teks putih */
             z-index: 1; /* Memberikan z-index yang lebih tinggi */
         }
-      
+          .container {
+            text-align: center; /* Pusatkan konten secara horizontal */
+       }
     </style>
 </head>
 <body class="container">
@@ -54,9 +66,7 @@
     </div>
 
     <!-- Tombol Next -->
-    <div>
-        <button class="nextButton"><a href="new bg.html">NEXT</a></button>
-    </div>
+    <div class="nextButton"><a href="new bg.html">NEXT</a></div>
 
     <!-- Video -->
     <div class="video-container">
