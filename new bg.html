@@ -1,85 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title>flower</title>
-    <style>
-        body {
-            margin: 0; /* Menghilangkan margin bawaan dari browser */
-            padding: 0; /* Menghilangkan padding bawaan dari browser */
-        }
-        .night {
-            z-index: -1;
-        }
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        .image {
-            display: none; /* Awalnya disembunyikan */
-            top: calc(50% + 20px); /* Tengah vertikal + jarak antara gambar dan deskripsi */
-            max-width: 50%; /* Lebar maksimal gambar */
-            height: auto; /* Tinggi gambar disesuaikan secara otomatis */
-            margin: 0 auto 20px;
-        }
-        .description {
-            display: none; /* Awalnya disembunyikan */
-            position: absolute;
-            top: calc(50% + 100px); /* Tengah vertikal + jarak antara gambar dan deskripsi */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white; /* Warna teks putih */
-            z-index: 1; /* Memberikan z-index yang lebih tinggi */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="img/flowers.png" type="image/x-icon">
+  <title>flower</title>
+  <style>
+    body {
+      margin: 0;
+      /* Menghilangkan margin bawaan dari browser */
+      padding: 0;
+      /* Menghilangkan padding bawaan dari browser */
+    }
+
+    .night {
+      z-index: -1;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .image {
+      display: none;
+      /* Awalnya disembunyikan */
+      max-width: 200%;
+      /* Lebar maksimal gambar */
+      height: auto;
+      /* Tinggi gambar disesuaikan secara otomatis */
+      margin: 20px auto 0;
+      /* Atur margin agar gambar muncul di atas tombol */
+
+    }
+  </style>
 </head>
+
 <body>
-    <div class="audio">
-        <!-- Hapus keterangan audio -->
-        <!-- <audio id="flowerAudio" controls preload="auto" loop playsinline>
-            <source src="https://top4top.io/del599e67cc9225f304f6a570acae3b50eb.html" type="audio/mpeg">
-        </audio> -->
-    </div>
-    <div class="night"></div>
+  <div class="audio">
+    <!-- Hapus keterangan audio -->
+    <!-- <audio id="flowerAudio" controls preload="auto" loop playsinline>
+                      <source src="https://top4top.io/del599e67cc9225f304f6a570acae3b50eb.html" type="audio/mpeg">
+                  </audio> -->
+  </div>
+  <div class="night"></div>
 
-    <div class="container">
-        <!-- Deskripsi -->
-        <div class="description" id="description">
-            <span>SCAN! untuk kejutan selanjutnyaa!!</span>
-        </div>
+  <div class="container">
+    <!-- Tombol play music -->
+    <button class="playButton" id="playButton" onclick="playAudio()">Play Music</button>
 
-        <!-- Tombol play music -->
-        <button class="playButton" id="playButton" onclick="playAudio()">Play Music</button>
+    <!-- Gambar dari GitHub -->
+    <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/Udah%20lihat%20videonya%20kan%20(1).png?raw=true"
+      alt="Deskripsi gambar" class="image" id="flowerImage">
+  </div>
 
-        <!-- Gambar dari GitHub -->
-        <img src="https://github.com/Ngurahbayu777/nyayaysd/blob/main/img/Udah%20lihat%20videonya%20kan%20(1).png?raw=true" alt="Deskripsi gambar" class="image" id="flowerImage">
-    </div>
+  <script>
+    function playAudio() {
+      // Ambil elemen audio
+      var audio = new Audio("https://i.top4top.io/m_2996mvl6x1.mp3");
+      var image = document.getElementById("flowerImage");
+      var playButton = document.getElementById("playButton");
 
-    <script>
-        function playAudio() {
-            // Ambil elemen audio
-            var audio = new Audio("https://i.top4top.io/m_2996mvl6x1.mp3");
-            var description = document.getElementById("description");
-            var image = document.getElementById("flowerImage");
-            var playButton = document.getElementById("playButton");
+      // Munculkan gambar setelah tombol play ditekan
+      image.style.display = "block";
 
-            // Munculkan deskripsi dan gambar setelah tombol play ditekan
-            description.style.display = "block";
-            image.style.display = "block";
+      // Sembunyikan tombol play
+      playButton.style.display = "none";
 
-            // Sembunyikan tombol play
-            playButton.style.display = "none";
-
-            // Mulai audio
-            audio.play();
-        }
-    </script>
+      // Mulai audio
+      audio.play();
+    }
+  </script>
 </body>
+
 </html>
