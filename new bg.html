@@ -42,9 +42,10 @@
 </head>
 <body>
     <div class="audio">
-        <audio id="flowerAudio" controls preload="auto" loop playsinline>
+        <!-- Hapus keterangan audio -->
+        <!-- <audio id="flowerAudio" controls preload="auto" loop playsinline>
             <source src="https://top4top.io/del599e67cc9225f304f6a570acae3b50eb.html" type="audio/mpeg">
-        </audio>
+        </audio> -->
     </div>
     <div class="night"></div>
 
@@ -63,7 +64,8 @@
 
     <script>
         function playAudio() {
-            var audio = document.getElementById("flowerAudio");
+            // Ambil elemen audio
+            var audio = new Audio("https://top4top.io/del599e67cc9225f304f6a570acae3b50eb.html");
             var description = document.getElementById("description");
             var image = document.getElementById("flowerImage");
             var playButton = document.getElementById("playButton");
