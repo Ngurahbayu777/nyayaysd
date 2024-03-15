@@ -43,7 +43,7 @@
 <body>
     <div class="audio">
         <audio id="flowerAudio" controls preload="auto" loop playsinline>
-            <source src="https://c.top4top.io/m_299694ze41.mp3" type="audio/mpeg">
+            <source src="https://top4top.io/del599e67cc9225f304f6a570acae3b50eb.html" type="audio/mpeg">
         </audio>
     </div>
     <div class="night"></div>
@@ -66,10 +66,14 @@
             var audio = document.getElementById("flowerAudio");
             var description = document.getElementById("description");
             var image = document.getElementById("flowerImage");
+            var playButton = document.getElementById("playButton");
 
             // Munculkan deskripsi dan gambar setelah tombol play ditekan
             description.style.display = "block";
             image.style.display = "block";
+
+            // Sembunyikan tombol play
+            playButton.style.display = "none";
 
             // Mulai audio
             audio.play();
