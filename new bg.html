@@ -21,18 +21,6 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
-        .description {
-          display: none; /* Awalnya disembunyikan */
-          position: absolute;
-          bottom: 20px; /* Atur posisi deskripsi di bagian bawah dengan jarak 20px dari bawah */
-          left: 50%;
-          transform: translateX(-50%);
-          text-align: center;
-          color: white;
-          /* Warna teks putih */
-          z-index: 1;
-          /* Memberikan z-index yang lebih tinggi */
-        }
         .image {
             display: none; /* Awalnya disembunyikan */
             top: calc(50% + 20px); /* Tengah vertikal + jarak antara gambar dan deskripsi */
@@ -53,9 +41,6 @@
 
     <div class="container">
         <!-- Deskripsi -->
-        <div class="description" id="description">
-            <span> SCAN! untuk kejutan selanjutnyaa!! !</span>
-        </div>
 
         <!-- Tombol play music -->
         <button class="playButton" id="playButton" onclick="playAudio()">Play Music</button>
