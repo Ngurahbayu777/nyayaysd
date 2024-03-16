@@ -7,7 +7,6 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>flower</title>
     <style>
-
         /* CSS untuk membuat video ditengah */
         .video-container {
             position: absolute;
@@ -16,6 +15,7 @@
             transform: translate(-50%, -50%);
             width: 70%; /* Lebar video */
             max-width: 560px; /* Lebar maksimal video */
+            display: none; /* Video akan disembunyikan secara default */
         }
         .video-container iframe {
             width: 100%; /* Lebar video */
@@ -30,7 +30,7 @@
             color: white; /* Warna teks putih */
             z-index: 1; /* Memberikan z-index yang lebih tinggi */
         }
-          .container {
+        .container {
             text-align: center; /* Pusatkan konten secara horizontal */
        }
     </style>
@@ -43,12 +43,21 @@
         <span>Udah lihat bunganya kan? Sekarang tonton videonya ya!</span>
     </div>
 
-    <!-- Tombol Next -->
-    <div class="nextButton"><a href="new bg.html">NEXT</a></div>
+    <!-- Tombol Play -->
+    <div class="playButton">
+        <button onclick="playVideo()">PLAY</button>
+    </div>
 
     <!-- Video -->
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/WwvIVgWad20" frameborder="0" allowfullscreen></iframe>
+    <div class="video-container" id="videoContainer">
+        <iframe id="videoFrame" src="https://www.youtube.com/embed/WwvIVgWad20" frameborder="0" allowfullscreen></iframe>
     </div>
+
+    <script>
+        function playVideo() {
+            // Menampilkan video setelah tombol play diklik
+            document.getElementById('videoContainer').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
