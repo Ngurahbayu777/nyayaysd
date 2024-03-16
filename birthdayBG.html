@@ -33,6 +33,36 @@
         .container {
             text-align: center; /* Pusatkan konten secara horizontal */
        }
+       .playButton {
+            position: absolute;
+            top: calc(50% + 50px); /* Atur posisi tombol play */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1; /* Pastikan tombol play muncul di atas video */
+        }
+        .playButton button {
+            background-color: #fff; /* Warna latar belakang tombol */
+            color: #000; /* Warna teks tombol */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .nextButton {
+            position: absolute;
+            bottom: 20px; /* Atur posisi tombol next */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1; /* Pastikan tombol next muncul di atas video */
+        }
+        .nextButton a {
+            text-decoration: none;
+            background-color: #fff; /* Warna latar belakang tombol */
+            color: #000; /* Warna teks tombol */
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body class="container">
@@ -44,7 +74,7 @@
     </div>
 
     <!-- Tombol Play -->
-    <div class="playButton">
+    <div class="playButton" id="playButton">
         <button onclick="playVideo()">PLAY</button>
     </div>
 
@@ -53,10 +83,17 @@
         <iframe id="videoFrame" src="https://www.youtube.com/embed/WwvIVgWad20" frameborder="0" allowfullscreen></iframe>
     </div>
 
+    <!-- Tombol Next -->
+    <div class="nextButton">
+        <a href="new bg.html">NEXT</a>
+    </div>
+
     <script>
         function playVideo() {
             // Menampilkan video setelah tombol play diklik
             document.getElementById('videoContainer').style.display = 'block';
+            // Menyembunyikan tombol play
+            document.getElementById('playButton').style.display = 'none';
         }
     </script>
 </body>
