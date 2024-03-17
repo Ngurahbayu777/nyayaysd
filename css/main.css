@@ -63,27 +63,25 @@ body {
 .playButton:hover {
   background-color: #16d2e7;
 }
- .nextButton3 {
-      display: none;
-      /* Awalnya disembunyikan */
-      position: absolute;
-      bottom: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 10px 20px;
-      background-color: #ccc; /* Ubah warna menjadi abu-abu */
-      color: black;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 14px;
-      text-decoration: none;
-    }
+.nextButton3 {
+  position: fixed; /* Mengubah posisi menjadi fixed */
+  bottom: 0; /* Menempatkan tombol di bagian bawah */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #ccc; /* Mengubah warna menjadi abu-abu */
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+}
 
-    .nextButton3 a {
-      text-decoration: none;
-      color: black;
-    }
+.nextButton3 a {
+  text-decoration: none;
+  color: black;
+}
 
 .night {
   position: fixed;
