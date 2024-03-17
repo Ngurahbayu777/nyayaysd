@@ -63,6 +63,27 @@ body {
 .playButton:hover {
   background-color: #16d2e7;
 }
+ .nextButton3 {
+      display: none;
+      /* Awalnya disembunyikan */
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      background-color: #ccc; /* Ubah warna menjadi abu-abu */
+      color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .nextButton3 a {
+      text-decoration: none;
+      color: black;
+    }
 
 .night {
   position: fixed;
