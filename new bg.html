@@ -68,25 +68,26 @@
   </div>
 
   <script>
-    function playAudio() {
-      // Ambil elemen audio
-      var audio = new Audio("https://l.top4top.io/m_2997cr7cx1.mp3");
-      var image = document.getElementById("flowerImage");
-      var playButton = document.getElementById("playButton");
-      var nextButton = document.getElementById("nextButton3"); // Ubah id menjadi "nextButton3"
+   function playAudio() {
+  // Ambil elemen audio
+  var audio = new Audio("https://l.top4top.io/m_2997cr7cx1.mp3");
+  var image = document.getElementById("flowerImage");
+  var playButton = document.getElementById("playButton");
+  var nextButton = document.getElementById("nextButton3"); // Menggunakan ID yang benar
+  
+  // Munculkan gambar setelah tombol play ditekan
+  image.style.display = "block";
+  
+  // Sembunyikan tombol play
+  playButton.style.display = "none";
+  
+  // Tampilkan tombol nextButton
+  nextButton.style.display = "block"; // Mengubah display menjadi block
+  
+  // Mulai audio
+  audio.play();
+}
 
-      // Munculkan gambar setelah tombol play ditekan
-      image.style.display = "block";
-
-      // Sembunyikan tombol play
-      playButton.style.display = "none";
-
-      // Tampilkan tombol nextButton
-      nextButton.style.display = "block"; // Ganti "nextButton" menjadi "nextButton3"
-
-      // Mulai audio
-      audio.play();
-    }
   </script>
 </body>
 
