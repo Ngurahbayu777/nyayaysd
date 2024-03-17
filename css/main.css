@@ -64,12 +64,14 @@ body {
   background-color: #16d2e7;
 }
 .nextButton3 {
-  position: fixed; /* Mengubah posisi menjadi fixed */
-  bottom: 0; /* Menempatkan tombol di bagian bawah */
+  display: none;
+  /* Awalnya disembunyikan */
+  position: absolute;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
-  background-color: #ccc; /* Mengubah warna menjadi abu-abu */
+  background-color: #ccc; /* Ubah warna menjadi abu-abu */
   color: black;
   border: none;
   border-radius: 10px;
