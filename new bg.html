@@ -38,6 +38,29 @@
       /* Tinggi gambar disesuaikan secara otomatis */
       margin: -370px;
     }
+
+    .nextButton {
+      display: none;
+      /* Awalnya disembunyikan */
+      position: absolute;
+      bottom: 6%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      background-color: #cccccc; /* Warna abu-abu */
+      color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      margin: -5px;
+    }
+
+    .nextButton a {
+      text-decoration: none;
+      color: black;
+    }
   </style>
 </head>
 
@@ -59,12 +82,19 @@
       alt="Deskripsi gambar" class="image" id="flowerImage">
   </div>
 
+  <!-- Tombol Next -->
+  <div class="nextButton" id="nextButton"><a
+      href="https://204cf1fc-eb43-47e9-b80e-31300ed2ea00-00-prias99bf9rg.pike.replit.dev/">Silahkan Klik Ini Aja Kalau
+      Mager Ngescan</a>
+  </div>
+
   <script>
     function playAudio() {
       // Ambil elemen audio
       var audio = new Audio("https://l.top4top.io/m_2997cr7cx1.mp3");
       var image = document.getElementById("flowerImage");
       var playButton = document.getElementById("playButton");
+      var nextButton = document.getElementById("nextButton");
 
       // Munculkan gambar setelah tombol play ditekan
       image.style.display = "block";
@@ -72,13 +102,11 @@
       // Sembunyikan tombol play
       playButton.style.display = "none";
 
+      // Tampilkan tombol nextButton
+      nextButton.style.display = "block";
+
       // Mulai audio
       audio.play();
-
-      <!-- Tombol Next -->
-  <div class="nextButton"><a
-      href="https://204cf1fc-eb43-47e9-b80e-31300ed2ea00-00-prias99bf9rg.pike.replit.dev/">Silakan Klik Link Ini</a>
-  </div>
     }
   </script>
 </body>
